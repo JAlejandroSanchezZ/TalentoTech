@@ -1,7 +1,11 @@
 import React from 'react';
 import '../estilos/Perfil.css';
+import Contador from './Contador';
+
 
 function Perfil(props){
+
+
     return(
         <div className='contenedor-perfil'>
             <img className='imagen-perfil'
@@ -16,6 +20,20 @@ function Perfil(props){
         </p>
         <p className='texto-perfil'>"{props.perfil}" </p>
         </div>
+        {/* Botonones para seguir en redes sociales */}
+        <button onClick={() => window.open(props.linkedin, '_blank')}>
+           Seguir en LinkedIn
+        <Contador/>
+        </button>
+        <button onClick={() => window.open(props.youtube, '_blank')}>
+           Seguir en Youtube
+        <Contador/>
+        </button>
+        <button onClick={() => window.open(props.twitter, '_blank')}>
+           Seguir en X (Anteriormente Twitter)
+        <Contador/>
+        </button>
+
     </div>
     );
 }
